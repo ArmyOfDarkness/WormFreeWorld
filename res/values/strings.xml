@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Worm Free World</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Worm Free World</string>
+    <string name="newgame">New Game</string>
+    <string name="about">About</string>
+    <string name="title_activity_game">Worm Finder</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="time">"Time "</string>
+    <string name="attempts">&quot;Attempts -  &quot;</string>
+    <string name="level">"Level "</string>
+
+    <string-array name="levels">
+        <item>Level 1, 4x4 D</item>
+        <item>Level 2, 4x3 T</item>
+        <item>Level 3, 4x3 Q</item>
+        <item>Level 4, 5x4 D</item>
+        <item>Level 5, 5x3 T</item>
+        <item>Level 6, 4x4 Q</item>
+        <item>Level 7, 6x4 D</item>
+        <item>Level 8, 6x4 T</item>
+        <item>Level 9, 5x4 Q</item>
+        <item>Level 10, 6x5 D</item>
+        <item>Level 11, 6x5 T</item>
+        <item>Level 12, 6x4 Q</item>
+        <item>Epic Game</item>
+    </string-array>
+
+    <string name="back">Back</string>
+    <string name="title_activity_about">Worm Free World</string>
+    <string name="link">Visit Website</string>
+    <string name="gamename">Worm Finder</string>
+    <string name="aboutWFW">About Worm Free World</string>
+    <string name="worms101">Worms 101</string>
+    <string name="instructions">Instructions</string>
+    <string name="title_activity_score">Worm Free World</string>
+    <string name="scores">Low Scores</string>
+    <string name="reset">Reset Scores</string>
+    <string name="app_id">158584577651305</string>
+    <string name="match">&quot;Matching - &quot;</string>
+    <string-array name="cardSets">
+        <item >Worms</item>
+        <item >Solids</item>
+    </string-array>
+    <string name="shareText">Share on Facebook!</string>
+    <string name="shareButton">Share</string>
+
+</resources>

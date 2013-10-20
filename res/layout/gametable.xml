@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@string/app_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" >
+
+    <Button
+	    android:id="@+id/bStart"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/start"
+	    android:textSize="24sp"
+	    android:textColor="#ffffff"
+	    android:background="@drawable/button_blue" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+    
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	        	android:layout_height="wrap_content"
+	        	android:gravity="center"
+	        	android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tvTime"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/time" />        
+			    <Chronometer
+			        android:id="@+id/chrono"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+		    </LinearLayout>    
+		    
+	        <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center" >
+			    
+		        <TextView
+		            android:id="@+id/tvAttemps"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/attempts" />
+		
+		        <TextView
+		            android:id="@+id/tvNumAttempts"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="" />
+	    
+    		</LinearLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+		    
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:gravity="center"
+	        	android:orientation="horizontal">
+		        <TextView 
+		            android:id="@+id/tvLevel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/level" />
+		        <TextView
+		            android:id="@+id/tvLevelNum"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" />
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+	            <TextView 
+		            android:id="@+id/tvMatch"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/match" />
+		        <TextView
+		            android:id="@+id/tvMatchGoal"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" />
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	 </LinearLayout>   
+            
+    <TableLayout
+        android:id="@+id/gameTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+    </TableLayout>
+
+    <TextView 
+        android:id="@+id/score"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+    
+    <LinearLayout
+        android:id="@+id/share" 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <com.facebook.widget.LoginButton
+            android:id="@+id/authButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:text="@string/shareButton"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_red"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

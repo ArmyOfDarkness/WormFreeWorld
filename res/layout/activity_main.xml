@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@string/app_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="top"
+    android:layout_gravity="center_horizontal" >
+
+    <ImageView
+        android:id="@+id/logo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/wfwlogo"
+        android:contentDescription="Worm Free World Logo"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+    
+    <Button
+        android:id="@+id/bAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lightblue"
+        android:text="@string/about"
+        android:textSize="24sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+    
+	    <Button
+	        android:id="@+id/bLink"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/button_lightblue"
+	        android:text="@string/link"
+	        android:textSize="24sp"
+	        android:layout_marginLeft="5dp" />
+	    
+	    <ImageButton
+	        android:id="@+id/facebookLink"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"	        
+	        android:src="@drawable/facebookbutton"
+	        android:background="@null" />
+	
+	    <ImageButton
+	        android:id="@+id/twitterLink"	        
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:src="@drawable/twitterbutton"
+	        android:background="@null" />
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="@string/gamename"
+        android:textSize="32sp" />
+    
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+	    
+	    <Spinner
+	        android:id="@+id/levelChooser"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" />
+
+	    <Spinner
+	        android:id="@+id/cardChooser"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" />
+
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/bNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lightgreen"
+        android:text="@string/newgame"
+        android:textSize="24sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:id="@+id/lowscores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lightgreen"
+        android:text="@string/scores"
+        android:textSize="24sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:id="@+id/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lightgreen"
+        android:text="@string/instructions"
+        android:textSize="24sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+</LinearLayout>
