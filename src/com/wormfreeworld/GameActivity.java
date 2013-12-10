@@ -145,9 +145,12 @@ public class GameActivity extends Activity {
 						startButton.setText("Start");
 						return;
 					} else {
+                        /*
 						finish();
 						startActivity(getIntent());
-						return;
+						return;*/
+                        setupGame();
+                        return;
 					}
 				}
 				if (!isStarted) {
@@ -291,6 +294,7 @@ public class GameActivity extends Activity {
         shareButton.setVisibility(View.INVISIBLE);
         getButtons();
         chrono.setBase(SystemClock.elapsedRealtime());
+        startButton.setText("Start");
         attemptView.setText("0");
         showLevel.setText(Integer.toString(level));
         matchGoal.setText(quadruplets ? "quadruplets" : triplets ? "triplets" : "doublets");
@@ -315,7 +319,7 @@ public class GameActivity extends Activity {
     			if (msg.what == 0) {
         			chrono.stop();
         		} else if (msg.what == 1) {
-        			long difference = (Long) msg.obj;
+        			long difference = (long) msg.obj;
         			chrono.setBase(chrono.getBase() + difference);
         			chrono.start();
         		}
@@ -376,9 +380,7 @@ public class GameActivity extends Activity {
                         synchronized(this) {
                             wait(2000);
                         }
-                        }
-                        catch(InterruptedException e) {
-                        }
+                    } catch(InterruptedException e) {}
 
                     //check user choice for match, update View on UI thread
 		        	if (match != null) {
@@ -390,8 +392,8 @@ public class GameActivity extends Activity {
 			        				synchronized(this) {
 			        					wait(2000);
 			        				}
-			        			} catch(InterruptedException e) {			        				
-			        			}
+			        			} catch(InterruptedException e) {}
+
 			        			if (match2 != null) {
 			        				revealCard(match2);
                                     if ((cardList.get(match2.getId() - 1)) == (cardList.get(turnover.getId() - 1))
@@ -400,8 +402,8 @@ public class GameActivity extends Activity {
                                             synchronized(this) {
                                                 wait(2000);
                                             }
-                                        } catch(InterruptedException e) {
-                                        }
+                                        } catch(InterruptedException e) {}
+
                                         if (match3 != null) {
                                             if ((cardList.get(match2.getId() - 1)) == (cardList.get(turnover.getId() - 1))
                                                     && (cardList.get(match3.getId() - 1)) == (cardList.get(turnover.getId() - 1))
@@ -422,8 +424,8 @@ public class GameActivity extends Activity {
                                                     synchronized(this) {
                                                         wait(1000);
                                                     }
-                                                } catch(InterruptedException e) {
-                                                }
+                                                } catch(InterruptedException e) {}
+
                                                 obscureCard(match, match2, match3);
                                                 match = null;
                                                 match2 = null;
@@ -440,8 +442,8 @@ public class GameActivity extends Activity {
                                             synchronized(this) {
                                                 wait(1000);
                                             }
-                                        } catch(InterruptedException e) {
-                                        }
+                                        } catch(InterruptedException e) {}
+
                                         obscureCard(match, match2);
                                         match = null;
                                         match2 = null;
@@ -457,8 +459,7 @@ public class GameActivity extends Activity {
 			        				synchronized(this) {
 			        					wait(2000);
 			        				}
-			        			} catch(InterruptedException e) {			        				
-			        			}
+			        			} catch(InterruptedException e) {}
 			        			if (match2 != null) {
 			        				if ((cardList.get(match2.getId() - 1)) == (cardList.get(turnover.getId() - 1))
 			    			        		&& match2 != turnover && match2 != match) {
@@ -476,8 +477,7 @@ public class GameActivity extends Activity {
 			        						synchronized(this) {
 			        							wait(1000);
 			        						}
-			        					} catch(InterruptedException e) {			        						
-			        					}
+			        					} catch(InterruptedException e) {}
 			        					obscureCard(match, match2);
 			        					match = null;
 			        					match2 = null;
@@ -500,8 +500,7 @@ public class GameActivity extends Activity {
 		        				synchronized(this) {
 		        				    wait(1000);
 		        				}
-		        			} catch(InterruptedException e) {
-		        			}
+		        			} catch(InterruptedException e) {}
 		        			obscureCard(match);
 			        		match = null;
 		        	    }
@@ -603,15 +602,13 @@ public class GameActivity extends Activity {
 
         //multiply list of cards depending on whether finding doublets, triplets, or quadruplets
     	if (quadruplets) {
-    		ArrayList<Drawable> cardList2 = new ArrayList<Drawable>();
-    		cardList2.addAll(cardList);
-    		cardList.addAll(cardList);
+    		ArrayList<Drawable> cardList2 = new ArrayList<Drawable>(cardList);
+    		cardList.addAll(cardList2);
     		cardList.addAll(cardList2);
     		cardList.addAll(cardList2);
     	} else if (triplets) {
-    		ArrayList<Drawable> cardList2 = new ArrayList<Drawable>();   		
-    		cardList2.addAll(cardList);
-    		cardList.addAll(cardList);
+    		ArrayList<Drawable> cardList2 = new ArrayList<Drawable>(cardList);
+    		cardList.addAll(cardList2);
     		cardList.addAll(cardList2);
     	} else {
     		cardList.addAll(cardList);
