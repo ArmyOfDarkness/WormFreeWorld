@@ -223,7 +223,6 @@ public class GameActivity extends Activity {
     				} else {
     					startButton.setText("Play Again");
     				}
-   				
     			}
     		}
     	};
@@ -523,7 +522,7 @@ public class GameActivity extends Activity {
 	    thread.start();
     }
 
-    //make cards disappear on successful math
+    //make cards disappear on successful match
     private void loseCard(ImageButton... cards) {
     	for (ImageButton card : cards) {
             Message msg = new Message();
