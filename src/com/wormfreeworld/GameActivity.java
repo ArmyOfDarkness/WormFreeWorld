@@ -673,7 +673,7 @@ public class GameActivity extends Activity {
             postParams.putString("caption", "I just achieved a personal best score of " + totalScore + " on " + fbLevel + " in Worm Finder!");
             postParams.putString("description", "Wormfree World is a non-profit dedicated to finding cures and diagnostics for intestinal roundworm parasites.");
             postParams.putString("link", "http://wfwins.org");
-            postParams.putString("picture", "http://nmraccelerator.com/wfwnewlogo100x100.png");
+            postParams.putString("picture", "http://pgc200.org/images/wfwnewlogo75x75.png");
             WebDialog feedDialog = (
                     new WebDialog.FeedDialogBuilder(context, session, postParams))
                     .setOnCompleteListener(new WebDialog.OnCompleteListener() {
